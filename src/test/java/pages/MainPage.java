@@ -1,8 +1,12 @@
+package pages;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class MainPage {
+    public static final By communicationBtn = By.xpath("//button[.//*[text()='Связь с банком']]");
     private WebDriver driver;
 
     public MainPage(WebDriver driver) {
@@ -28,5 +32,9 @@ public class MainPage {
 
     public WebElement getCommunicationElement() {
         return communicationElement;
+    }
+
+    public WebElement getCommunicationBtn() {
+        return driver.findElement(communicationBtn);
     }
 }
