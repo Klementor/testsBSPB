@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -60,6 +61,42 @@ public class MainTest {
     public void openCommunicationWithTheBankTest() {
         WebElement element = driver.findElement(By.xpath("//button[.//*[text()='Связь с банком']]"));
         element.click();
+        WebElement elementPrivateClients = (new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h2[text()='Частным клиентам']"))));
+        String string = elementPrivateClients.getAttribute("textContent");
+        Assertions.assertEquals(string, "Частным клиентам");
+        Assertions.assertEquals(driver.getCurrentUrl(), "https://www.bspb.ru/feedback");
+    }
+
+    @Test
+    public void PageFactoryTest() { //Попробовал объединить все 3 теста в 1 используя PageFactory
+        MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
+        
+        WebElement cardElement = mainPage.getCardElement();
+        WebElement loginElement = mainPage.getLoginElement();
+        WebElement communicationElement = mainPage.getCommunicationElement();
+
+        String ariaExpended = cardElement.getAttribute("aria-expanded"); // 1 тест testNawbar
+        Assertions.assertEquals(ariaExpended, "false");
+        new Actions(driver)
+                .moveToElement(cardElement)
+                .perform();
+        String ariaExpendedUpd = cardElement.getAttribute("aria-expanded");
+        Assertions.assertEquals(ariaExpendedUpd, "true");
+
+
+        loginElement.click(); // 2 тест openLoginPageTest
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
+        WebElement elementLogo = (new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='logo']"))));
+        Assertions.assertEquals(elementLogo.getAttribute("alt"), "Интернет банк - Банк Санкт-Петербург");
+        Assertions.assertEquals(driver.getCurrentUrl(), "https://i.bspb.ru/auth?response_type=code&client_id=1&red" +
+                "irect_uri=https%3A%2F%2Fi.bspb.ru%2Flogin%2Fsuccess&prefetch_uri=https%3A%2F%2Fi.bspb.ru%2Flogin%2Fpref" +
+                "etch&force_new_session=true");
+
+        driver.switchTo().window(tabs.get(0)); // 3 тест openCommunicationWithTheBankTest
+        communicationElement.click();
         WebElement elementPrivateClients = (new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h2[text()='Частным клиентам']"))));
         String string = elementPrivateClients.getAttribute("textContent");
