@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16873063-e668-4261-891c-977018f71db0" name="Changes" comment="experiments">
-      <change afterPath="$PROJECT_DIR$/src/test/java/MainTest.java" afterDir="false" />
+    <list default="true" id="16873063-e668-4261-891c-977018f71db0" name="Changes" comment="Созданы тесты входа в аккаунт&#10;1 тест проверка на открытие страницы авторизации и отображения элементов&#10;2 тест проверка, что все поля заполняются корректно&#10;3 тест проверка на значения авторизации в разном регистре&#10;4 тест проверка что с любым паролем не удастся авторизоваться&#10;Также был произведен рефакторинг уже существующих тестов">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/AssertTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/MainTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +48,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/mihai/IdeaProjects/java-shareit",
+    "last_opened_file_path": "C:/Users/mihai/IdeaProjects/testsBSPB",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -52,22 +56,102 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.26091954",
+    "settings.editor.selected.configurable": "File.Encoding",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="IntroduceConstantDialog.RECENTS_KEY">
+      <recent name="MainTest" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.LoginTest">
+    <configuration name="AssertTests.AssertJListOfString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="testsBSPB" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.AssertTests" />
+      <option name="METHOD_NAME" value="AssertJListOfString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="testsBSPB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.correctFillingOfFieldsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="testsBSPB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
+      <option name="METHOD_NAME" value="correctFillingOfFieldsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.openLoginPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="testsBSPB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
+      <option name="METHOD_NAME" value="openLoginPageTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.testNawbar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="testsBSPB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MainTest" />
+      <option name="METHOD_NAME" value="testNawbar" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MainTest" />
+        <item itemvalue="JUnit.LoginTest" />
+        <item itemvalue="JUnit.LoginTest.correctFillingOfFieldsTest" />
+        <item itemvalue="JUnit.LoginTest.openLoginPageTest" />
+        <item itemvalue="JUnit.MainTest.testNawbar" />
+        <item itemvalue="JUnit.AssertTests.AssertJListOfString" />
       </list>
     </recent_temporary>
   </component>
@@ -83,7 +167,14 @@
       <workItem from="1698747134311" duration="594000" />
       <workItem from="1698767904363" duration="6171000" />
       <workItem from="1698909930409" duration="3894000" />
-      <workItem from="1699004822381" duration="4646000" />
+      <workItem from="1699004822381" duration="5290000" />
+      <workItem from="1699306184090" duration="2408000" />
+      <workItem from="1699344230263" duration="10888000" />
+      <workItem from="1699402983845" duration="2110000" />
+      <workItem from="1699423534813" duration="19186000" />
+      <workItem from="1699506286656" duration="21291000" />
+      <workItem from="1699532756831" duration="1029000" />
+      <workItem from="1699534999636" duration="8945000" />
     </task>
     <task id="LOCAL-00001" summary="experiments">
       <created>1698911609745</created>
@@ -92,7 +183,35 @@
       <option name="project" value="LOCAL" />
       <updated>1698911609745</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Обновлена структура проекта&#10;Созданы 2 теста: &#10;1) С помощью actions имитируем наведение курсора на элемент и проверяем что атрибут элемента изменился с false на true&#10;2) Находим на сайте элемент (кнопку &quot;Войти&quot;) и кликаем на нее. В браузере должна открыться страница входа в аккаунт">
+      <created>1699011462919</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699011462919</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Добавлен тест openCommunicationWithTheBankTest&#10;Доработан тест openLoginPageTest&#10;Добавлены методы @BeforeEach и @AfterEach открывающие и закрывающие браузер до и после теста соответственно">
+      <created>1699360979824</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699360979825</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Создан класс MainPage для реализации PageFactory&#10;Создан новый тест использующий PageFactory и объединяющий в себе 3 предыдущих">
+      <created>1699404663793</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699404663793</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Созданы тесты входа в аккаунт&#10;1 тест проверка на открытие страницы авторизации и отображения элементов&#10;2 тест проверка, что все поля заполняются корректно&#10;3 тест проверка на значения авторизации в разном регистре&#10;4 тест проверка что с любым паролем не удастся авторизоваться&#10;Также был произведен рефакторинг уже существующих тестов">
+      <created>1699475807498</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699475807498</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,9 +219,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="experiments" />
-    <option name="LAST_COMMIT_MESSAGE" value="experiments" />
+    <MESSAGE value="Обновлена структура проекта&#10;Созданы 2 теста: &#10;1) С помощью actions имитируем наведение курсора на элемент и проверяем что атрибут элемента изменился с false на true&#10;2) Находим на сайте элемент (кнопку &quot;Войти&quot;) и кликаем на нее. В браузере должна открыться страница входа в аккаунт" />
+    <MESSAGE value="Добавлен тест openCommunicationWithTheBankTest&#10;Доработан тест openLoginPageTest&#10;Добавлены методы @BeforeEach и @AfterEach открывающие и закрывающие браузер до и после теста соответственно" />
+    <MESSAGE value="Создан класс MainPage для реализации PageFactory&#10;Создан новый тест использующий PageFactory и объединяющий в себе 3 предыдущих" />
+    <MESSAGE value="Созданы тесты входа в аккаунт&#10;1 тест проверка на открытие страницы авторизации и отображения элементов&#10;2 тест проверка, что все поля заполняются корректно&#10;3 тест проверка на значения авторизации в разном регистре&#10;4 тест проверка что с любым паролем не удастся авторизоваться&#10;Также был произведен рефакторинг уже существующих тестов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Созданы тесты входа в аккаунт&#10;1 тест проверка на открытие страницы авторизации и отображения элементов&#10;2 тест проверка, что все поля заполняются корректно&#10;3 тест проверка на значения авторизации в разном регистре&#10;4 тест проверка что с любым паролем не удастся авторизоваться&#10;Также был произведен рефакторинг уже существующих тестов" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NoSuchMethodException" package="java.lang" />
+          <option name="timeStamp" value="5" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="ariaExpended" />
