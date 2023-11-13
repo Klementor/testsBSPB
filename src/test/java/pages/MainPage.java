@@ -7,11 +7,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class MainPage {
     public static final By communicationBtn = By.xpath("//button[.//*[text()='Связь с банком']]");
-    private WebDriver driver;
-
-    public MainPage(WebDriver driver) {
-        this.driver = driver;
-    }
 
     @FindBy(xpath = "//button[.//*[text()='Карты']]")
     private WebElement cardElement;
@@ -32,9 +27,5 @@ public class MainPage {
 
     public WebElement getCommunicationElement() {
         return communicationElement;
-    }
-
-    public WebElement getCommunicationBtn() {
-        return driver.findElement(communicationBtn);
     }
 }

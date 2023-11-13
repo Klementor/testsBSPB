@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 public class LoginPage {
 
     public static final String loginUrl = "https://i.bspb.ru/auth";
-    public static final String CODE_TEXT = "//*[@id=\"otp-code-text\"]";
+    public static final String CODE_TEXT = "//*[@id='otp-code-text']";
     public static final String alertsContainer = "//*[@id='alerts-container']";
 
     @FindBy(xpath = "//*[@id='logo']")
