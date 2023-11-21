@@ -66,11 +66,9 @@ public class LoginTest {
         softly.assertThat(loginPage.getLogoText().getAttribute("alt"))
                 .as("Логотип страницы авторизации")
                 .isEqualTo("Интернет банк - Банк Санкт-Петербург");
-        softly.assertThat(6).as("Неправильный тест написанный специально").isEqualTo(5);
         softly.assertThat(driver.getCurrentUrl())
                 .as("url страницы авторизации")
                 .startsWith(LoginPage.loginUrl);
-        System.out.println("Эта строка выведется даже если тест до нее упадет");
         softly.assertAll();
     }
 
